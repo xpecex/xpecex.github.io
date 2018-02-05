@@ -1,19 +1,24 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     $(this).foundation();
 
-    $(".progress").each(function(index){
+    $(".progress").each(function (index) {
 
-        $total_width = parseInt( $("#body > div.row > div:nth-child(1)").css("width") );
-        $skill_width = parseInt( $(this).children(".progress-meter").css("width") );
+        $total_width = parseInt($("#body > div.row > div:nth-child(1)").css("width"));
+        $skill_width = parseInt($(this).children(".progress-meter").css("width"));
         $percent = $skill_width * 100 / $total_width;
 
-        if( $percent < 50 ){
+        if ($percent < 50) {
             $(this).addClass("alert");
-        } else if( $percent > 50 && $percent < 70){
+        } else if ($percent > 50 && $percent < 70) {
             $(this).addClass("warning");
         } else {
             $(this).addClass("success");
         }
+    });
+
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles', 'js/particles.json', function () {
+        console.log('callback - particles.js config loaded');
     });
 })

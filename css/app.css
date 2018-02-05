@@ -12,12 +12,14 @@ div#background #background-top {
     float: left;
     width: 100%;
     height: 350px;
-    background-color: #1d1d1d;
-    background-image: url("../img/3881185-big-data-wallpaper-compressor.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    background-color: #2D7D9A;
     z-index: 2;
+}
+canvas {
+    position: absolute;
+    float: left;
+    width: 100%;
+    bottom: 0;
 }
 #upbox {
     position: relative;
@@ -25,7 +27,7 @@ div#background #background-top {
     margin-top: 8rem;
 }
 #header {
-    background-color: #2b5797;
+    background-color: #4C4A48;
     padding: 0;
     overflow: hidden;
     color: #fff;
