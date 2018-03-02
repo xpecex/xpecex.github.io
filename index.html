@@ -19,19 +19,19 @@
 
     <!-- In case image.png -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
     <!-- Favicons End -->
 
     <!-- CSS Start -->
     <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="css/foundation-icons/foundation-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <!-- CSS End -->
 
     <!-- JS Start -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- JS End -->
 
@@ -42,175 +42,250 @@
 </head>
 
 <body>
-    <div id="background">
-        <div id="background-top">
-            <canvas id="particles" class="particles"></canvas>
+    <header id="main_cover">
+        <div class="header-bg"></div>
+        <div id="my_" class="row align-center">
+            <div id="my_photo" class="column small-8 medium-8 large-3">
+                <div class="around"></div>
+            </div>
+            <div id="my_name" class="column small-12 medium-12 large-12 text-center">
+                <h1>Pedro Filipe</h1>
+                <h4>Freelancer / I.T</h4>
+            </div>
+            <div id="my_links" class="column small-12 medium-12 large-12 text-center">
+                <a href="https://t.me/xpecex" target="_blank" title="Telegram">
+                    <i class="fi-comments"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pedrofilipecf/" title="Linkedin">
+                    <i class="fi-social-linkedin"></i>
+                </a>
+                <a href="mailto:pedrofilipe64@gmail.com" target="_blank" title="E-mail">
+                    <i class="fi-mail"></i>
+                </a>
+            </div>
         </div>
-        <div id="upbox">
-            <div id="box" class="row align-center">
-                <div id="header" class="large-9 medium-9 small-12 columns">
-                    <div class="row">
-                        <div id="photo" class="large-4 medium-4 small-12 columns">
-                            <img src="img/153193511737591.jpg" class="photo">
+    </header>
+    <aside id="education_skills">
+        <div id="two-div" class="row">
+            <div id="" class="column small-12 medium-6 large-6">
+                <h4 class="title">Formação Acadêmica</h4>
+                <ul>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2016 - 2017</b>
+                            </p>
+                            <p>Técnico</p>
                         </div>
-                        <div id="data" class="large-8 medium-8 small-12 columns">
-                            <h2>Pedro Filipe C. Ferreira</h2>
-                            <h6>Técnico em Mecatrônica e Informática.</h6>
+                        <div class="institute education-widget">
                             <p>
-                                <i class="fi-comments"></i>
-                                <a href="https://t.me/xpecex" target="blank">Envie-me uma mensagem no Telegram</a>
+                                <b>Técnico em Mecatrônica</b>
                             </p>
-                            <p>
-                                <i class="fi-mail"></i>
-                                <a href="mailto:pedrofilipe64@gmail.com" target="blank">pedrofilipe64@gmail.com</a>
-                            </p>
-                            <p>
-                                <i class="fi-social-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/pedrofilipecf" target="blank">linkedin.com/in/pedrofilipecf</a>
-                            </p>
-                            <p>
-                                <i class="fi-marker"></i> Salvador, Bahia, BR.</p>
+                            <p>Senai Cimatec</p>
                         </div>
-                    </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2013 - 2014</b>
+                            </p>
+                            <p>Profissionalizante</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Manutenção de Microcomputadores</b>
+                            </p>
+                            <p>PC Informática</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="skills" class="column small-12 medium-6 large-6">
+                <div id="rigth-bg"></div>
+                <div class="chart" data-value="0.9" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Hardware</p>
                 </div>
-                <div id="body" class="large-9 medium-9 small-12 columns">
-
-                    <h3 class="title">
-                        <i class="fi-book"></i> Formação Acadêmica</h3>
-
-                    <div id="" class="widget-box">
-                        <h5>Técnico em Mecatrônica</h5>
-                        <h6>Senai Cimatec</h6>
-                        <h6>2016 - 2017</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Manutenção de Microcomputadores</h5>
-                        <h6>PC Informática</h6>
-                        <h6>2013 - 2014</h6>
-                    </div>
-
-                    <h3 class="title">
-                        <i class="fi-projection-screen"></i> Cursos e Workshops </h3>
-
-                    <div id="" class="widget-box">
-                        <h5>Tecnologia da Informação e Comunicação</h5>
-                        <h6>Senai</h6>
-                        <h6>2014</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Segurança da Informação I</h5>
-                        <h6>Intel</h6>
-                        <h6>2014</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Segurança da Informação</h5>
-                        <h6>Fundação Bradesco</h6>
-                        <h6>2015</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Fundamentos de Redes</h5>
-                        <h6>Fundação Bradesco</h6>
-                        <h6>2015</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Lógica de Programação</h5>
-                        <h6>Senai</h6>
-                        <h6>2016</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>HTML5 Homologado pelo W3C</h5>
-                        <h6>Microsoft</h6>
-                        <h6>2015</h6>
-                    </div>
-
-                    <h3 class="title">
-                        <i class="fi-puzzle"></i> Conhecimentos e Habilidades</h3>
-
-                    <div class="row">
-                        <div class="large-6 medium-6 small-6 columns">
-                            HTML
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 98%"></div>
-                            </div>
-                            CSS
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 70%"></div>
-                            </div>
-                            JS
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 75%"></div>
-                            </div>
-                            PHP
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 65%"></div>
-                            </div>
-                            Ladder
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 65%"></div>
-                            </div>
-                            C
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 65%"></div>
-                            </div>
-                            Linux
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 45%"></div>
-                            </div>
-                            Windows
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 99%"></div>
-                            </div>
-                        </div>
-                        <div class="large-6 medium-6 small-6 columns">
-                            Eletrônica
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 67%"></div>
-                            </div>
-                            Microcontroladores
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 79%"></div>
-                            </div>
-                            Hardware
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 90%"></div>
-                            </div>
-                            IoT
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 89%"></div>
-                            </div>
-                            Arduino
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 98%"></div>
-                            </div>
-                            Elétrica
-                            <div class=" progress">
-                                <div class="progress-meter" style="width: 58%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="title">
-                        <i class="fi-results"></i> Experiências Profissionais</h3>
-
-                    <div id="" class="widget-box">
-                        <h5>Aux. Informática</h5>
-                        <h6>PC Informática</h6>
-                        <h6>2013 - 2014</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Aux. Informática</h5>
-                        <h6>PL Variedades</h6>
-                        <h6>2014 - 2015</h6>
-                    </div>
-                    <div id="" class="widget-box">
-                        <h5>Freelancer - Segurança Eletrônica</h5>
-                        <h6>Proteção</h6>
-                        <h6>2015 - 2018</h6>
-                    </div>
+                <div class="chart" data-value="1" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Windows</p>
+                </div>
+                <div class="chart" data-value="0.5" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Linux</p>
+                </div>
+                <div class="chart" data-value="0.75" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Redes</p>
+                </div>
+                <div class="chart" data-value="0.96" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="chart" data-value="0.7" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Eletrônica</p>
+                </div>
+                <div class="chart" data-value="0.65" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Elétrica</p>
+                </div>
+                <div class="chart" data-value="0.7" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>PLC/Ladder</p>
+                </div>
+                <div class="chart" data-value="0.65" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Mecânica</p>
+                </div>
+                <div class="chart" data-value="0.85" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Arduino/PIC</p>
+                </div>
+                <div class="chart" data-value="0.8" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>IoT</p>
+                </div>
+                <div class="chart" data-value="0.7" data-size="60" data-thickness="5" data-animation-start-value="1.0">
+                    <span>%</span>
+                    <p>Embarcados</p>
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
+    <aside id="certs">
+        <div id="two-div" class="row">
+
+            <div id="contact" class="column small-12 medium-6 large-6 text-center">
+                <div id="left-bg"></div>
+                <a id="vcard" class="button warning" href="others/Pedro_Cerqueira.vcf" target="_blank">Download vCard
+                    <hr>
+                    <img src="img/qr-code.png" width="200" />
+                </a>
+            </div>
+
+            <div id="courses" class="column small-12 medium-6 large-6">
+                <h4 class="title">Cursos e Aperfeiçoamentos</h4>
+                <ul>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Infraestrutura de T.I</b>
+                            </p>
+                            <p>Intel</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>HTML5 - Homologado pelo W3C</b>
+                            </p>
+                            <p>Intel</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Segurança da Informação</b>
+                            </p>
+                            <p>Fundação Bradesco</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Redes</b>
+                            </p>
+                            <p>Fundação Bradesco</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Workshop</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Servidores</b>
+                            </p>
+                            <p>Intel</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Lógica de Programação</b>
+                            </p>
+                            <p>Senai</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2015</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Metrologia</b>
+                            </p>
+                            <p>Senai</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="year education-widget">
+                            <p>
+                                <b>2014</b>
+                            </p>
+                            <p>Curso</p>
+                        </div>
+                        <div class="institute education-widget">
+                            <p>
+                                <b>Tecnologia da Informação e Comunicação</b>
+                            </p>
+                            <p>Senai</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+
 </body>
 
 </html>

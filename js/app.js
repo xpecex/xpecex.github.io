@@ -2,111 +2,40 @@ $(document).ready(function () {
 
     $(this).foundation();
 
-    $(".progress").each(function (index) {
 
-        $total_width = parseInt($("#body > div.row > div:nth-child(1)").css("width"));
-        $skill_width = parseInt($(this).children(".progress-meter").css("width"));
-        $percent = $skill_width * 100 / $total_width;
+    // Add smooth scrolling to all links
+    $("a.anchor").on('click', function (event) {
 
-        if ($percent < 50) {
-            $(this).addClass("alert");
-        } else if ($percent > 50 && $percent < 70) {
-            $(this).addClass("warning");
-        } else {
-            $(this).addClass("success");
-        }
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
     });
 
-    var canvas = document.querySelector("canvas");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    var ctx = canvas.getContext("2d");
 
-    var TAU = 2 * Math.PI;
-
-    times = [];
-    function loop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        update();
-        draw();
-        requestAnimationFrame(loop);
-    }
-
-    function Ball(startX, startY, startVelX, startVelY) {
-        this.x = startX || Math.random() * canvas.width;
-        this.y = startY || Math.random() * canvas.height;
-        this.vel = {
-            x: startVelX || Math.random() * 2 - 1,
-            y: startVelY || Math.random() * 2 - 1
-        };
-        this.update = function (canvas) {
-            if (this.x > canvas.width + 20 || this.x < -50) {
-                this.vel.x = -this.vel.x;
-            }
-            if (this.y > canvas.height + 20 || this.y < -50) {
-                this.vel.y = -this.vel.y;
-            }
-            this.x += this.vel.x;
-            this.y += this.vel.y;
-        };
-        this.draw = function (ctx, can) {
-            ctx.beginPath();
-            ctx.globalAlpha = .4;
-            ctx.fillStyle = '#448fda';
-            ctx.arc((0.5 + this.x) | 0, (0.5 + this.y) | 0, 3, 0, TAU, false);
-            ctx.fill();
-        }
-    }
-
-    var balls = [];
-    for (var i = 0; i < canvas.width * canvas.height / (65 * 65); i++) {
-        balls.push(new Ball(Math.random() * canvas.width, Math.random() * canvas.height));
-    }
-
-    var lastTime = Date.now();
-    function update() {
-        var diff = Date.now() - lastTime;
-        for (var frame = 0; frame * 900 < diff; frame++) {
-            for (var index = 0; index < balls.length; index++) {
-                balls[index].update(canvas);
-            }
-        }
-        lastTime = Date.now();
-    }
-    var mouseX = -1e9, mouseY = -1e9;
-    document.addEventListener('mousemove', function (event) {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
+    $('.chart').circleProgress({
+        size: 90,
+        fill: { color: '#fff' }
     });
 
-    function distMouse(ball) {
-        return Math.hypot(ball.x - mouseX, ball.y - mouseY);
-    }
-
-    function draw() {
-        ctx.globalAlpha = 1;
-        ctx.fillStyle = '#001c33';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        for (var index = 0; index < balls.length; index++) {
-            var ball = balls[index];
-            ball.draw(ctx, canvas);
-            ctx.beginPath();
-            for (var index2 = balls.length - 1; index2 > index; index2 += -1) {
-                var ball2 = balls[index2];
-                var dist = Math.hypot(ball.x - ball2.x, ball.y - ball2.y);
-                if (dist < 100) {
-                    ctx.strokeStyle = "#448fda";
-                    ctx.globalAlpha = 1 - (dist > 100 ? .8 : dist / 150);
-                    ctx.lineWidth = "2px";
-                    ctx.moveTo((0.5 + ball.x) | 0, (0.5 + ball.y) | 0);
-                    ctx.lineTo((0.5 + ball2.x) | 0, (0.5 + ball2.y) | 0);
-                }
-            }
-            ctx.stroke();
-        }
-    }
-
-    // Start
-    loop();
+    $('.chart').each(function (index, value) {
+        var percent = $('.chart').eq(index).data( "value" );
+        var percent_txt = (percent * 100) + "%";
+        $('.chart').eq(index).children('span').text(percent_txt);
+    });
 
 })
