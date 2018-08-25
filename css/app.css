@@ -1,202 +1,65 @@
-/* generic elements */
-.title {
-    color: #000;
-    border-bottom: #888 1px solid;
-    margin-top: 2rem;
+body {
+    background-image: url('../img/black-background.jpeg');
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    color: beige;
+h1,h4,h5 {
+    font-family: 'Poppins', sans-serif;
+    padding-left: none;
+    margin-left: none;
+    color: azure;
+}
+h1 span {
+    color: rgba(204,51,51,0.9);
 }
 h4 {
-    font-family: 'Open Sans', sans-serif;
-    color:rgba(255,255,255,.5);
-}
-ul {
-    list-style-type: none;
-    padding: 0rem 2rem;
-    margin: 0;
-}
-ul li {
-    display: inline-block;
-    margin-top: 2rem;
+    margin-bottom: 50px;
 }
 
-/* body */
-body {
-    background-color: #f5f5f5;
-    font-family: 'Open Sans', sans-serif;
+.icon {
+    padding-left: 0px !important;
+}
+.icon:not(:last-child) {
+    margin-bottom: 15px;
 }
 
-/* header */
-header {
-    background-color: #000;
-    height: 100vh;
-    position: relative;
-    float: left;
-    width: 100%;
-    z-index: 0;
-}
-.header-bg {
-    position: absolute;
-    float: left;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0%;
-    background-image: url("../img/5813.jpg");
-    background-position: bottom;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -10;
-    opacity: 0.2;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-#my_ {
-    z-index: 10;
-    margin-top: 5rem;
-}
-.around {
-    background-color: #f5f5f5;
-    border-radius: 50%;
-    height: 32.87vh;
-    background-image: url("../img/153193511737591.jpg");
-    background-position: bottom;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#my_links a{
-    font-size: 30px;
-    margin-left: 10px;
+a {
+    color: azure; 
 }
 
-/* aside */
-aside {
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    position: relative;
-    float: left;
-    width: 100%;
-    z-index: 0;
+#line-up {
+    height: 40vh;
 }
-aside #rigth-bg {
-    background-color: #444;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    width: 50%;
-    z-index: -10;
-    background-image: url("../img/Blur.jpg");
-    background-position: bottom;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
+#line-up #vertical-line {
+    height: 40vh;
+    border-left: rgba(204,51,51,0.8) 5px solid;
 }
-aside #left-bg {
-    background-color: #444;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    width: 50%;
-    z-index: -10;
-    background-image: url("../img/computer.png");
-    background-position: center;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
+#line-down {
+    height: 10vh;
 }
-#two-div {
-    margin-left: 0.83333rem;
-    margin-right: 0.83333rem;
-    max-width: none;
-}
-#courses {
-    max-height: 100vh;
-    overflow-y: scroll;
+#line-down #vertical-line {
+    height: 10vh;
+    border-left: rgba(204,51,51,0.8) 5px solid;
 }
 
-/* chart */
-#skills .chart {
-    margin-top: 2rem;
-}
-.chart {
-    position: relative;
-    float: left;
-    width: 90px;
-    height: 90px;
-    text-align: center;
-    margin: 18px;
-    color: #fff;
-}
-.chart span {
-    position: absolute;
-    float: left;
-    margin-top: -4rem;
-    margin-left: -0.7rem;
+#container {
+    height: 50vh;
 }
 
-/* widgets */
-.education-widget {
-    position: relative;
-    float: left;  
-}
-.year {
-    text-align: center;
-    width: 10rem;
-    margin-right: 1rem;
-    border-right: 1px solid #ccc;
-}
-a#vcard {
-    margin-top: 13rem;
-}
-
-/* media query */
-@media print, screen and (min-width: 64em) {
-    .around {
-        height: 34.5vh;
-    }  
-}
-@media print, screen and (max-width: 480px) {
-    aside #rigth-bg {
-        display: block;
-        width: 100%;
-        height: none;
-        bottom: none;
+@media (max-width: 600px) {
+    #container {
+        height: 43vh;
     }
-    aside #left-bg {
-        display: block;
-        width: 100%;
-        height: none;
-        bottom: none;
+    #line-down {
+        height: 17vh;
     }
-    #contact {
-        height: 100vh;
+    #line-down #vertical-line {
+        height: 17vh;
     }
-    ul {
-        list-style-type: none;
-        padding: 0rem 0rem;
-        margin: 0;
-    }
-    .year {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 1rem;
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-    }
-    .year p {
-        text-align: left;
-        position: relative;
-        float: left;
-        margin-right: 1rem;
-    }
-    #skills {
-        max-height: 100vh;
-        overflow-y: scroll;
+    .icon:not(:last-child) {
+        margin-bottom: 20px;
     }
 }
