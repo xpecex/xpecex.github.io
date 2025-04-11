@@ -1,65 +1,18 @@
+/* ---- reset ---- */
 body {
-    background-image: url('../img/black-background.jpeg');
-    background-attachment: fixed;
-    background-origin: content-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-h1,h4,h5 {
-    font-family: 'Poppins', sans-serif;
-    padding-left: none;
-    margin-left: none;
-    color: azure;
-}
-h1 span {
-    color: rgba(204,51,51,0.9);
-}
-h4 {
-    margin-bottom: 50px;
+    margin: 0;
 }
 
-.icon {
-    padding-left: 0px !important;
-}
-.icon:not(:last-child) {
-    margin-bottom: 15px;
+canvas {
+    display: block;
 }
 
-a {
-    color: azure; 
+/* ---- particles.js container ---- */
+#particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #272829;
 }
 
-#line-up {
-    height: 40vh;
-}
-#line-up #vertical-line {
-    height: 40vh;
-    border-left: rgba(204,51,51,0.8) 5px solid;
-}
-#line-down {
-    height: 10vh;
-}
-#line-down #vertical-line {
-    height: 10vh;
-    border-left: rgba(204,51,51,0.8) 5px solid;
-}
-
-#container {
-    height: 50vh;
-}
-
-@media (max-width: 600px) {
-    #container {
-        height: 43vh;
-    }
-    #line-down {
-        height: 17vh;
-    }
-    #line-down #vertical-line {
-        height: 17vh;
-    }
-    .icon:not(:last-child) {
-        margin-bottom: 20px;
-    }
-}
+/* Image by Patrick Fore on Unsplash */
